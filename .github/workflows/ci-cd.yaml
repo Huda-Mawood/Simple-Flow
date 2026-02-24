@@ -25,5 +25,8 @@ jobs:
     - name: Build Docker image
       run: docker build -t simple-flow .
 
+    - name: Push Docker image
+      run: docker push simple-flow
+
     - name: Run container
       run: docker run -d -p 8000:8000 simple-flow
