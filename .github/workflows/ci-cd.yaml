@@ -23,10 +23,10 @@ jobs:
         password: ${{ secrets.DOCKER_PASSWORD }}
 
     - name: Build Docker image
-      run: docker build -t simple-flow .
+      run: docker build -t hudamawood/simple-flow .
 
     - name: Push Docker image
-      run: docker push simple-flow
+      run: docker push hudamawood/simple-flow
 
     - name: Run container
-      run: docker run -d -p 8000:8000 simple-flow
+      run: docker run -d -p 8000:8000 hudamawood/simple-flow
